@@ -1,8 +1,8 @@
-package td4;
+package devoirs;
 
 import java.util.Arrays;
 
-public class partie3 {
+public class mediane {
 
 	public static void main(String[]args) {
 		
