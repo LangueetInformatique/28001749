@@ -1,4 +1,4 @@
-package exercices_TD2;
+package td2;
 
 /**
  * test des classes A et B

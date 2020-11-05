@@ -1,4 +1,4 @@
-package exercices_TD2;
+package td2;
 
 /**
  * 
