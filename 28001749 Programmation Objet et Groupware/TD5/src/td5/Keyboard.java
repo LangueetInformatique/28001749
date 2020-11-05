@@ -1,10 +1,10 @@
 /*
- * Créé le 15 oct. 2003
+ * Crï¿½ï¿½ le 15 oct. 2003
  *
- * Pour changer le modèle de ce fichier généré, allez à :
- * Fenêtre&gt;Préférences&gt;Java&gt;Génération de code&gt;Code et commentaires
+ * Pour changer le modï¿½le de ce fichier gï¿½nï¿½rï¿½, allez ï¿½ :
+ * Fenï¿½tre&gt;Prï¿½fï¿½rences&gt;Java&gt;Gï¿½nï¿½ration de code&gt;Code et commentaires
  */
-package util;
+package td5;
 
 import java.io.*;
 import java.util.*;
@@ -13,8 +13,8 @@ import java.util.*;
 /**
  * @author montacie
  *
- * Pour changer le modèle de ce commentaire de type généré, allez à :
- * Fenêtre&gt;Préférences&gt;Java&gt;Génération de code&gt;Code et commentaires
+ * Pour changer le modï¿½le de ce commentaire de type gï¿½nï¿½rï¿½, allez ï¿½ :
+ * Fenï¿½tre&gt;Prï¿½fï¿½rences&gt;Java&gt;Gï¿½nï¿½ration de code&gt;Code et commentaires
  */
 public class Keyboard {
 	private static String[] Lire (String mess) {
