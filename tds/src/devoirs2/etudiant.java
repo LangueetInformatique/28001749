@@ -27,19 +27,19 @@ public class etudiant {
 		return nom;
 	}
 	
-public String getprenom() {
+	public String getprenom() {
 		
 		return prenom;
 	}
 
-public int getnumetu() {
+	public int getnumetu() {
 	
-	return numetu;
-}
+		return numetu;
+	}
 
-public float getnote() {
+	public float getnote() {
 	
-	return note;
-}
+		return note;
+	}
 	
 }
