@@ -3,7 +3,8 @@ package devoirs2;
 public class etudiant {
 
 	String nom, prenom;
-	int numetu, note;
+	int numetu; 
+	float note;
 	
 	/*
 	 * constructeur vide
@@ -13,7 +14,7 @@ public class etudiant {
 	/*
 	 * constructeur non-vide
 	 */
-	public etudiant(String nom, String prenom, int numetu, int note) {
+	public etudiant(String nom, String prenom, int numetu, float note) {
 		
 		this.nom = nom;
 		this.prenom = prenom;
