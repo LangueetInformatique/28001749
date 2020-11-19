@@ -13,15 +13,10 @@ public class promo {
 	int annee;
 	ArrayList<etudiant> etudiants;
 	
-	public void addetu(etudiant x) {
+	public promo(int setannee, ArrayList<etudiant> setetudiants) {
 		
-		etudiants.add(x);
-	}
-	
-	public promo(int annee, ArrayList<etudiant> etudiants) {
-		
-		this.annee = annee;
-		this.etudiants = etudiants;
+		this.annee = setannee;
+		this.etudiants = setetudiants;
 	}
 	
 	public int getannee() {
