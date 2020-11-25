@@ -3,43 +3,58 @@ package td7;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class calendar2 {
-
+public class calendar2 extends Calendar {
+	
 	boolean cours;
-	static Calendar calendrier = Calendar.getInstance();
+	int jour,mois,annee,heure,minute,seconde;
+	Calendar calendrier = Calendar.getInstance();
+	
+	public void testcours(int heure) {
 		
-	public static int creation() {
+		if(calendrier.get(Calendar.DAY_OF_WEEK)==4){
 			
-		int jour = calendrier.get(Calendar.DATE);
-		int mois = calendrier.get(Calendar.MONTH);
-		int annee = calendrier.get(Calendar.YEAR);
-			
-		int heure = calendrier.get(Calendar.HOUR);
-		int minute = calendrier.get(Calendar.MINUTE);
-		int seconde = calendrier.get(Calendar.SECOND);
+			if(12 > heure && heure < 9) {
 				
-		GregorianCalendar Gcalendrier = new GregorianCalendar();
-				
-		System.out.println("date de création : "+jour+"/"+mois+"/"+annee);
-		System.out.println("heure de création : "+heure+"h"+minute+" et "+seconde+" sec");
-		
-		return seconde;
+				cours = true;
+				System.out.println("objet créé pendant le cours de M. Montacié\n");
+
+			}
+		}	
 	}
 	
-	public static int afficher() {
+	public void creation() {
 		
-		int jour = calendrier.get(Calendar.DATE);
-		int mois = calendrier.get(Calendar.MONTH);
-		int annee = calendrier.get(Calendar.YEAR);
+		this.jour = calendrier.get(Calendar.DATE);
+		this.mois = calendrier.get(Calendar.MONTH);
+		this.annee = calendrier.get(Calendar.YEAR);
 			
-		int heure = calendrier.get(Calendar.HOUR);
-		int minute = calendrier.get(Calendar.MINUTE);
-		int seconde = calendrier.get(Calendar.SECOND);
+		this.heure = calendrier.get(Calendar.HOUR);
+		this.minute = calendrier.get(Calendar.MINUTE);
+		this.seconde = calendrier.get(Calendar.SECOND);
+		
+		System.out.println("date de création de l'objet:");
+		System.out.println("date : "+jour+"/"+mois+"/"+annee+"\nheure : "+heure+"h"+minute+" et "+seconde+" sec\n");
+		
+		testcours(heure);
+	}
+	
+	public void afficher() {
 				
-		GregorianCalendar Gcalendrier = new GregorianCalendar();
-				
-		System.out.println("date : "+jour+"/"+mois+"/"+annee);
-		System.out.println("heure : "+heure+"h"+minute+" et "+seconde+" sec");
+		this.jour = calendrier.get(Calendar.DATE);
+		this.mois = calendrier.get(Calendar.MONTH);
+		this.annee = calendrier.get(Calendar.YEAR);
+			
+		this.heure = calendrier.get(Calendar.HOUR);
+		this.minute = calendrier.get(Calendar.MINUTE);
+		this.seconde = calendrier.get(Calendar.SECOND);
+		
+		System.out.println("date courante:");
+		System.out.println("date : "+jour+"/"+mois+"/"+annee+"\nheure : "+heure+"h"+minute+" et "+seconde+" sec\n");
+		
+		testcours(heure);
+	}
+	
+	public int getseconde() {
 		
 		return seconde;
 	}
@@ -50,11 +65,52 @@ public class calendar2 {
 		
 		System.out.println("objet créé depuis "+delais+" secondes");
 	}
-	
-	public static void main(String[]args) {
 
-		int seconde2 = afficher();
-		int seconde1 = creation();
-		duree(seconde1,seconde2);
+	@Override
+	public void add(int arg0, int arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void computeFields() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void computeTime() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getGreatestMinimum(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getLeastMaximum(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getMaximum(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getMinimum(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void roll(int arg0, boolean arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 }
