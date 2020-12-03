@@ -14,9 +14,13 @@ public class test {
 		String contenu_adolphe = LireToutUnTexte.Lire(adolphe);
 		
 		int longueur_adolphe = LireToutUnTexte.Chercher(contenu_adolphe);
+		String contexte_adolphe = LireToutUnTexte.ChercherVoir(contenu_adolphe, "Adolphe", 10);
 		
 		System.out.println(contenu_adelaide);
 		System.out.println(longueur_adolphe);
+		System.out.println(contexte_adolphe);
+		
 	}
+	
 	
 }
