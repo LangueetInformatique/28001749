@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class LireToutUnTexte {
 
-public static String Lire(File fichier) throws IOException {
+	public static String Lire(File fichier) throws IOException {
 		
 		String contenu = "";
 		Scanner lecteur = new Scanner(fichier);
@@ -21,13 +21,10 @@ public static String Lire(File fichier) throws IOException {
 		lecteur.close();
 		return contenu;
 	}	
-	
-public static void main(String[]args) throws IOException {
-	
-	File adelaide = new File("src/td10/adelaide");
-	String contenu = Lire(adelaide);
-	
-	System.out.println(contenu);
-}
+
+	public static int Chercher(String texte) {
+		
+		return texte.length();
+	}
 
 }
