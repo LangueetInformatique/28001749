@@ -32,7 +32,7 @@ public class LireToutUnTexte {
 		if(texte.contains(chaine)) {
 			
 			
-			int index_start = texte.indexOf(chaine) - (taille_contexte + chaine.length()) ;
+			int index_start = texte.indexOf(chaine) - (taille_contexte) ;
 			int index_end = texte.indexOf(chaine) + (taille_contexte + chaine.length());
 			
 			contexte = texte.substring(index_start,index_end);
