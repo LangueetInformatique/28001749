@@ -1,9 +1,15 @@
 package td10;
 
+import java.util.Arrays;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
+
+import com.sun.tools.javac.util.ArrayUtils;
+
+import sun.security.util.ArrayUtil;
 
 public class LireToutUnTexte {
 
@@ -28,19 +34,25 @@ public class LireToutUnTexte {
 
 	public static String ChercherVoir(String texte, String chaine, int taille_contexte) {
 		
-		String contexte;
+		int i = 0;
+		String contexte = "";
+		
 		if(texte.contains(chaine)) {
 			
+			String[] liste_chaine = chaine.split(" ");
+			String[] liste_mots = texte.split(" ");
 			
-			int index_start = texte.indexOf(chaine) - (taille_contexte) ;
-			int index_end = texte.indexOf(chaine) + (taille_contexte + chaine.length());
+			int index_start = ArrayUtils.indexOf(liste_mots,liste_chaine[0]);
+			int index_end = Arrays.asList(liste_mots).(chaine) + taille_contexte + chaine.length();
 			
-			contexte = texte.substring(index_start,index_end);
+			while(i >= index_start && i <= index_end) {
+				
+				contexte = contexte + liste_mots[i];
+			}
 		}
 		else {
 			
-			contexte = null;
-			System.out.println("la chaine cherchée n'est pas dans le texte");
+			contexte = "la chaine cherchée n'est pas dans le texte";
 		}
 		
 		return contexte;
