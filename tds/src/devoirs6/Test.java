@@ -1,9 +1,13 @@
 package devoirs6;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * 
+ * @author bezancon
+ *
+ */
 public class Test {
 
 	public static void main(String[]args) throws IOException {
@@ -15,5 +19,7 @@ public class Test {
 		FileInputStreamTP7 test = new FileInputStreamTP7(texte);
 		test.copier(copie);
 		test.compresser(zipper);
+		test.propriete();
+		test.close();
 	}
 }
