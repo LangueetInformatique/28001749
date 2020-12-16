@@ -8,7 +8,7 @@ public class Compresse {
 	public static void main(String[]args) {
 		
 	File texte = new File("Nom.txt");
-	compresser(texte);
+	//compresser(texte);
 	
 	}
 	
