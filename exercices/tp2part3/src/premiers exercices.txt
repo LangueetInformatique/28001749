@@ -1,0 +1,13 @@
+"Madame de Hautcastel arrangea commodément sa jolie tête sur le dossier de son fauteuil; chacun fit silence et le baron parla en ces termes:"
+	Selon la méthode 1, il y a 24 tokens dans cette phrase.
+	Selon la méthode 2, il y a 24 tokens dans cette phrase.
+
+compt = 0
+for char in phrase:
+	if char == ' ' or char == '/t':
+		compt += 1
+compt += 1 //dernier mot
+
+"hello, le soleil brille, brille aujourd’hui…"
+	Selon la méthode 1, il y a 6 tokens dans cette phrase.
+	Selon la méthode 2, il y a 7 tokens dans cette phrase.
