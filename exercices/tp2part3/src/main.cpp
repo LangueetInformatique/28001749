@@ -1,4 +1,4 @@
-#include "CompterMots.h"
+#include "main.h"
 
 int main(){
 
@@ -18,4 +18,3 @@ int main(){
 		cout << k << " : " << global_tab_char[k] << endl;
 	}
 }
-

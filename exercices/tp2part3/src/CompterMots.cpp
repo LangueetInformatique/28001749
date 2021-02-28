@@ -4,12 +4,13 @@ vector<char> global_tab_char;
 int taille_glob = 0;
 
 void comptmots(string fichier, int methode){
+
 	//va lire un fichier.txt et en faire un tableau
 	//de caractères, avant d'effectuer un decoupage en tokens,
 	//en fonction d'une méthode 1 ou 2.
 
 	ifstream fin;
-	fin.open(fichier);
+	fin.open(fichier); //ouverture du fichier
 
 	if(fin.fail()){
 		cerr << "erreur, on peut pas lire le fichier " << fichier << endl;
@@ -34,6 +35,7 @@ void comptmots(string fichier, int methode){
 
 
 int renvoienbcar(vector<char> tab_char, int taille, int methode){
+
 	//prend en entrée un tableau de char ainsi que sa taille, et renvoie
 	//le nombre de tokens mots dans le tableau, selon une methode 1 ou 2.
 
@@ -85,6 +87,7 @@ int renvoienbcar(vector<char> tab_char, int taille, int methode){
 }
 
 void renvoienbe(string phrase, char c){
+
 	//prend en entrée un string et renvoie le nombre
 	//de fois que l'on y voit le caractère c.
 
@@ -103,20 +106,24 @@ void renvoienbe(string phrase, char c){
 
 void associercarcompteur(string car){
 
+	//prend en entrée un string, et en lit chaque caractères, afin
+	//de les placer dans un tableau, si le caractère lut n'est pas déjà
+	//dedans. le tableau est une variable globale.
+
 	for(string::size_type i=0; i<car.size(); i++){
 		bool dejavu = false;
 
-		for(int j=0;j<taille_glob;j++){
+		for(int j=0;j<taille_glob;j++){ //on parcourt le string
 
-			if(car[i] == global_tab_char[j]){
-				dejavu = true;
+			if(car[i] == global_tab_char[j]){ //on parcourt le tableau pour chaque char du string
+				dejavu = true; //si on tombe sur le char dans le tableau, on le note comme déjà vu.
 			}
 		}
 
-		if(dejavu != true){
+		if(dejavu != true){ //si le char n'est pas déjà dans le tableau...
 
 			taille_glob++;
-			global_tab_char.push_back(car[i]);
+			global_tab_char.push_back(car[i]); //... on incrémente le tableau avec le char.
 		}
 	}
 }
