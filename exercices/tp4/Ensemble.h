@@ -1,16 +1,16 @@
 #include <iostream>
-#include <cassert>
+#include <vector>
 using namespace std;
 
-template <typename T> class creaTab {
+template <typename T> class ensemble {
 protected :
 	unsigned int capacite;
-	unsigned int pasExtension;
-	T* tab;
+	vector<T> vect;  // correct ?
 public :
-	creaTab(unsigned int c, int p);
-	~creaTab();
-	void add(unsigned int i, T it);
-	void suppr(T it);
-	bool isIn(T it);
+	ensemble(unsigned int taille);
+	~ensemble();
+	T recuperer(unsigned int i)const;
+	void ajouter(T it);
+	void supprimer(T i);
+	void appartenance(T i);
 };

@@ -33,5 +33,11 @@ int main(){
 
 	//EXERCICE 2 ----------
 
+	Etudiant e3(10);
+	Etudiant e4(20);
 
+	auto test = ensemble<Etudiant>(0);
+	test.ajouter(e3);
+	test.appartenance(e3);
+	test.supprimer(e3);
 }

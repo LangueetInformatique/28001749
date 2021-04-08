@@ -1,38 +1,40 @@
 #include "Ensemble.h"
 
-template <typename T> creaTab<T>::creaTab(unsigned int c, int p) {
-	assert((c>=0) && (p>0));
-	capacite = c;
-	pasExtension = p;
-	tab = new T[capacite];
+template <typename T> ensemble<T>::ensemble(unsigned int taille){
+	capacite = taille;
+	vector<T> vect(capacite); // correct ?
 }
 
-template <typename T>creaTab<T>::~creaTab() {
-	delete [] tab;
-	tab = NULL;
+template <typename T>ensemble<T>::~ensemble() {
+	vect.clear();
 }
 
-template <typename T> void creaTab<T>::add(unsigned int i, T it) {
-	if (i < capacite){
-			tab[i] = it;
+template <typename T> T ensemble<T>::recuperer(unsigned int i) const {
+	return vect[i];
+}
+
+template <typename T> void ensemble<T>::ajouter(T it) {
+	vect.push_back(it);
+}
+
+template <typename T> void ensemble<T>::supprimer(T it) {
+	for (unsigned int i=0; i<vect.size(); i++) {
+			if(vect[i] == it){ // comment comparer
+				vect.erase(vect.begin()+i);
+			}
 	}
 }
 
-template <typename T> void creaTab<T>::suppr(T it) {
-	for(T i=0;i<capacite;i++){
-			if(tab[i] == it){
-				delete tab[i];
-			}
+template <typename T> void ensemble<T>::appartenance(T it) {
+	for (unsigned int i=0; i<vect.size(); i++) {
+				if(vect[i] == it){ // comment comparer
+					cout << "dans le vecteur" << endl;
+				}
+
+				else{
+					cout << "pas dans le vecteur" << endl;
+				}
 		}
 }
 
-template <typename T> bool creaTab<T>::isIn(T it) {
-	bool in = false;
-		for(T i=0;i<capacite;i++){
-			if(tab[i] == it){
-				in = true;
-			}
-		}
 
-		return in;
-}

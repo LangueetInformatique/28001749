@@ -1,8 +1,6 @@
 #ifndef ETUDIANT_H_
 #define ETUDIANT_H_
 
-#endif /*ETUDIANT_H_*/
-
 class Etudiant {
 private:
 	int m_NombreNote; // nombre de notes
@@ -15,3 +13,5 @@ public:
 	void putnote(int e, int n); // ajouter une note
 	int getnote(int e) const; // lire une note avec protection
 };
+
+#endif /*ETUDIANT_H_*/
