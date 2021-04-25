@@ -1,18 +1,17 @@
 #include "fonctions.h"
 
-list <int> set_list(list<int> l){
+list <int> set_list(list<int> liste){
 
 	//liste.sort();
 	//liste.unique();
 
-	list <int> liste = l;
 	list<int>::iterator iter = liste.begin();
 	set<int> elements;
 
 	while (iter != liste.end()){
 
-		if (elements.find(*iter) != elements.end()){
-			iter = liste.erase(iter);
+		if (elements.find(*iter) != elements.end()){ //meme si find() n'est pas mentionné, je trouve son utilisation
+			iter = liste.erase(iter);				 //très pratique ici.
 		}
 
 		else{
