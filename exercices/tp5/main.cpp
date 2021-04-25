@@ -14,6 +14,14 @@ int main(){
 	liste = reverse_list(liste);
 	print(liste);
 
+	liste = empiler(liste,5);
+	print(liste);
+
+	liste = depiler(liste);
+	print(liste);
+
+	top_elem(liste);
+
 	//exercice 2
 
 	//on instancie la liste des etudiants
@@ -26,8 +34,8 @@ int main(){
 
 	//les affichages, en selectionner un seul à la fois (sinon, ça affiche que le premier,
 	//je ne sais pas pourquoi...)
-	//afficherProf(G);
-	afficher(G);
+	afficherProf(G);
+	//afficher(G);
 
 	return 0;
 }

@@ -1,5 +1,6 @@
 #include "fonctions.h"
 
+//partie 1 ex1
 list <int> set_list(list<int> liste){
 
 	//liste.sort();
@@ -23,6 +24,7 @@ list <int> set_list(list<int> liste){
 	return liste;
 }
 
+//partie 2 ex1
 list <int> reverse_list(list<int> l){
 
 	list <int> liste;
@@ -40,4 +42,22 @@ void print(list<int> const &list){
     	cout << i << " , ";
     }
     cout << "" << endl;
+}
+
+//partie 3 ex1
+list<int> empiler(list<int> liste, int s){
+
+    liste.push_front(s);
+    return liste;
+}
+
+list<int> depiler(list<int> liste){
+
+	liste.pop_front();
+    return liste;
+}
+
+void top_elem(list<int> liste){
+
+	cout << *liste.begin() << endl;
 }
